@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Minha Plataforma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <div class="logo-icon">◈</div>
+        <h1>Criar Conta</h1>
+      </div>
+
+      <div id="alert-box" class="alert hidden"></div>
+
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="fullname">Nome Completo</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Digite seu nome" autocomplete="name" />
+          <span class="field-error" id="error-fullname"></span>
+        </div>
+
+        <div class="field">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" name="username" placeholder="Escolha um nome de usuário" autocomplete="username" />
+          <span class="field-error" id="error-username"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Crie uma senha" autocomplete="new-password" />
+          <span class="field-error" id="error-password"></span>
+        </div>
+
+        <button type="submit" class="btn-primary" id="btn-register">
+          <span id="btn-text">Cadastrar</span>
+          <span id="btn-spinner" class="spinner hidden"></span>
+        </button>
+      </form>
+
+      <p class="footer-text">Já tem uma conta? <a href="index.html">Entre aqui</a></p>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

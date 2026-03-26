@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">◈ Minha Plataforma</div>
+    <div class="nav-user">
+      <div class="avatar" id="nav-avatar"></div>
+      <span id="nav-username"></span>
+      <button class="btn-logout" id="btn-logout">Sair</button>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <div class="welcome-card">
+      <div class="welcome-text">
+        <span class="welcome-greeting" id="greeting-text"></span>
+        <h2 id="user-fullname"></h2>
+        <p class="welcome-sub">Bem-vindo(a) de volta à sua conta.</p>
+      </div>
+      <div class="welcome-illustration">👋</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🔑</div>
+        <div class="stat-info">
+          <span class="stat-label">Último acesso</span>
+          <span class="stat-value" id="last-access">—</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <div class="stat-info">
+          <span class="stat-label">Total de acessos</span>
+          <span class="stat-value" id="total-access">—</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🍪</div>
+        <div class="stat-info">
+          <span class="stat-label">Sessão expira</span>
+          <span class="stat-value" id="session-expiry">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="log-section">
+      <div class="log-header">
+        <h3>Log de Acessos</h3>
+        <button class="btn-clear-log" id="btn-clear-log">Limpar log</button>
+      </div>
+      <div class="log-table-wrapper">
+        <table class="log-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Usuário</th>
+              <th>Data / Hora</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="log-body">
+            <tr><td colspan="4" class="log-empty">Nenhum registro encontrado.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
